@@ -1,0 +1,5 @@
+/.env.development.local
+/.env.development.local.demo
+/.env.production.local
+/build
+/node_modules

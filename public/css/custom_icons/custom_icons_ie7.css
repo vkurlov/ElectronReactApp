@@ -1,0 +1,10 @@
+[class^="fa-custom"], [class*=" fa-custom"] {
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1em;
+}
+ 
+.fa-custom-delans { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.fa-custom-kladovoy { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.fa-custom-sauri { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }

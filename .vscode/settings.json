@@ -1,0 +1,97 @@
+{
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": false,
+    "prettier.bracketSpacing": true,
+    "prettier.jsxBracketSameLine": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true,
+      "source.organizeImports": true,
+    },
+    
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.autoClosingQuotes": "languageDefined",
+        "editor.trimAutoWhitespace": false,
+        "editor.insertSpaces": true,
+      },
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.autoClosingQuotes": "languageDefined",
+        "editor.trimAutoWhitespace": false,
+        "editor.insertSpaces": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true,
+        }
+      },
+      "[typescriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.autoClosingQuotes": "languageDefined",
+        "editor.trimAutoWhitespace": false,
+        "editor.insertSpaces": true,
+    },
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.implementationsCodeLens.enabled": true,
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.quoteStyle": "single",
+    
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "javascript.preferences.quoteStyle": "single",
+
+    
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    "typescript.suggest.autoImports": true,
+    "javascript.suggest.autoImports": true,
+    
+    "editor.insertSpaces": true,
+    "editor.trimAutoWhitespace": false,
+    "editor.autoClosingQuotes": "languageDefined",
+    
+    "better-comments.tags": [
+      {
+        "tag": "!",
+        "color": "#FF2D00",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "?",
+        "color": "#3498DB",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "//",
+        "color": "#474747",
+        "strikethrough": true,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "todo",
+        "color": "#FF8C00",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "bugfix",
+        "color": "#FF8C77",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      },
+      {
+        "tag": "*",
+        "color": "#98C379",
+        "strikethrough": false,
+        "backgroundColor": "transparent"
+      }
+    ]
+}

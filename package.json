@@ -1,0 +1,115 @@
+{
+  "name": "link42",
+  "version": "1.6.42",
+  "description": "Линк42",
+  "author": "https://clouds42.com",
+  "homepage": "./",
+  "private": true,
+  "type": "CommonJS",
+  "main": "electron.js",
+  "build": {
+    "appId": "com.clouds42.link42",
+    "compression": "normal",
+    "productName": "Линк42",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist2"
+    },
+    "linux": {
+      "target": [
+        "snap",
+        "AppImage"
+      ],
+      "description": "Линк42",
+      "category": "Network;Feed"
+    },
+    "mac": {
+      "type": "distribution",
+      "target": [
+        "zip"
+      ]
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "favicon.ico"
+    }
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.9.14",
+    "@material-ui/icons": "^4.9.1",
+    "bootstrap": "^4.5.0",
+    "classnames": "^2.2.6",
+    "concurrently": "^5.2.0",
+    "electron-is-dev": "^1.2.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "js-cookie": "^2.2.1",
+    "jwt-decode": "^2.2.0",
+    "notistack": "^0.9.16",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-number-format": "^4.4.1",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
+    "react-router-bootstrap": "^0.25.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "reactstrap": "^8.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "wait-on": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "25.2.3",
+    "@types/js-cookie": "^2.2.6",
+    "@types/jwt-decode": "^2.2.1",
+    "@types/node": "12.12.6",
+    "@types/react": "16.9.35",
+    "@types/react-dom": "16.9.8",
+    "@types/react-helmet": "^6.0.0",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router": "^5.1.7",
+    "@types/react-router-bootstrap": "^0.24.5",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/reactstrap": "^8.4.2",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "electron": "^9.0.3",
+    "electron-builder": "^22.7.0",
+    "electron-packager": "^14.2.1",
+    "eslint-config-react-app": "^5.2.1",
+    "redux-devtools-extension": "^2.13.8",
+    "tslint": "^6.1.2",
+    "tslint-react": "^5.0.0",
+    "typed-css-modules": "^0.6.4",
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "tcm": "node ./node_modules/typed-css-modules/lib/cli.js src/app/view -w",
+    "build": "react-scripts build",
+    "build_to_cp": "npm run build && (del \"../../ControlPanel/Views/ReactSpa/\" /S /Q) && (robocopy /S /E build/ ../../ControlPanel/Views/ReactSpa) ^& IF %ERRORLEVEL% LEQ 1 exit 0",
+    "test": "react-scripts test --watchAll",
+    "eject": "react-scripts eject",
+   
+    "build:electron": "tsc -p electron/tsconfig.json",
+    "start:electron": "concurrently \"npm run start\" \"wait-on http://localhost:1010 && npm run build:electron && electron --remote-debugging-port=9222 ./build/electron.js\"",
+    "build:electron:app": "npm run build && npm run build:electron && electron-builder --publish=always"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
